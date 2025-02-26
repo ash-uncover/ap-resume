@@ -1,0 +1,31 @@
+{
+  "firstname": "John",
+  "lastname": "Doe",
+  "birthdate": "1992/01/05",
+  "nationality": "German",
+  "title": "Job Engineer",
+  "description": "",
+  "contact": {
+    "phone": "",
+    "email": "",
+    "address": ""
+  },
+  "social": {
+    "linkedin": "",
+    "facebook": "",
+    "instagram": "",
+    "codingame": "",
+    "stackoverflow": "",
+    "github": ""
+  },
+  "experience": [
+    {
+      "startdate": "",
+      "enddate": "",
+      "company": "",
+      "jobtitle": "",
+      "description": "",
+      "skills": ""
+    }
+  ]
+}

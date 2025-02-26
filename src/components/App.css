@@ -1,0 +1,30 @@
+.app {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+
+  & > .app-header {
+    background: white;
+  }
+
+  & > .app-main {
+    height: 0;
+    flex-grow: 1;
+    background: lightgrey;
+    display: flex;
+    justify-content: center;
+    padding: 2rem;
+    overflow: auto;
+  }
+
+  & > .app-footer {
+    background: grey;
+    height: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 0 1rem;
+    font-style: italic;
+    font-size: 0.8rem;
+  }
+}
