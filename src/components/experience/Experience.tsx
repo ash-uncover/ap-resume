@@ -2,21 +2,22 @@ import React from 'react'
 
 import { RootState } from 'src/store'
 import { useSelector } from 'react-redux'
+import { ResumeTitle } from '../common/ResumeTitle'
 
 export const Experience = () => {
 
-  // Hooks //
+  // #region Hooks
+  const experience = useSelector((state: RootState) => state.data.data.experience)
+  // #endregion
 
-  const experience = useSelector((state: RootState) => state.data.experience)
-
-  // Rendering //
-
-  if (experience.length) {
+  // #region Rendering
+  if (experience && experience.length) {
     return (
       <section className='resume-experience'>
-        <h3 className='resume-experience-title'>
-          Experience
-        </h3>
+        <ResumeTitle
+          className='resume-experience-title'
+          text='Experience'
+        />
         <ul className='resume-experience'>
           {experience.map((entry, index) => <ExperienceEntry key={index} {...entry} />)}
         </ul>
@@ -25,9 +26,10 @@ export const Experience = () => {
   }
 
   return null
+  // #endregion
 }
 
-const ExperienceEntry = (props: ResumeExperience) => {
+const ExperienceEntry = (props: ModelResumeExperience) => {
 
   // Rendering //
 

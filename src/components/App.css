@@ -10,7 +10,7 @@
   & > .app-main {
     height: 0;
     flex-grow: 1;
-    background: lightgrey;
+    background: #222222;
     display: flex;
     justify-content: center;
     padding: 2rem;

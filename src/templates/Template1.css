@@ -1,107 +1,30 @@
-.template1 { 
+.resume {
   font-family: 'Roboto', sans-serif;
   background: white;
-  border: 1px solid black;
-  padding: 1rem;
+  border: 1px solid #222;
+
+  display: flex;
+
+  aspect-ratio: 0.707;
+  width: 800px;
   height: fit-content;
-  display: grid;
-  
-  grid-template-columns: 1fr 4fr;
-  grid-template-rows: repeat(1, 1fr);
 
-  max-width: 800px;
-
-  & .resume-general {
-    grid-row: 1;
-    grid-column: 2;
-  }
-
-  & .resume-contact {
-    grid-row: 2;
-    grid-column: 1;
-    order: 1;
-
-    & .resume-contact-title { 
-
-    }
-    & .resume-contact-phone { 
-
-    }
-    & .resume-contact-email { 
-
-    }
-    & .resume-contact-address { 
-
+  & .resume-side {
+    padding: 1rem;
+    width: 0;
+    flex-grow: 1;
+    background: #9CA7AE;
+    & .resume-side-content {
+      overflow: hidden;
     }
   }
-
-  & .resume-expertise {
-    grid-row: 2;
-    grid-column: 1;
-    order: 2;
-    
-    & .resume-expertise-title { 
-    }
-    & .resume-expertise-list { 
-      & .resume-expertise-entry { 
-      }
-    }
-  }
-
-  & .resume-education {
-    grid-row: 4;
-    grid-column: 1;
-
-    & .resume-education-title { 
-    }
-    & .resume-education-list { 
-      & .resume-education-entry { 
-      }
-    }
-  }
-
-  & .resume-lang {
-    grid-row: 5;
-    grid-column: 1;
-
-    & .resume-lang-title { 
-    }
-    & .resume-lang-list { 
-      & .resume-lang-entry { 
-      }
-    }
-  }
-
-  & .resume-experience {
-    grid-row: 2;
-    grid-column: 2;
-    & .resume-experience-title { 
-    }
-    & .resume-experience-list { 
-      & .resume-experience-entry { 
-      }
-    }
-  }
-
-  & .resume-social {
-    grid-row: 3;
-    grid-column: 2;
-    & .resume-social-title { 
-    }
-    & .resume-social-list { 
-      & .resume-social-entry { 
-      }
-    }
-  }
-
-  & .resume-hobby {
-    grid-row: 4;
-    grid-column: 2;
-    & .resume-education-title { 
-    }
-    & .resume-education-list { 
-      & .resume-education-entry { 
-      }
+  & .resume-main {
+    padding: 1rem;
+    width: 0;
+    flex-grow: 3;
+    background: #EEE;
+    & .resume-main-content {
+      overflow: hidden;
     }
   }
 }

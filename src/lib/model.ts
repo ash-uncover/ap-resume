@@ -1,4 +1,4 @@
-interface Resume {
+interface ModelResume {
   firstname: string
   lastname: string
   birthdate: string
@@ -10,48 +10,52 @@ interface Resume {
     email: string
     address: string
   }
-  expertise: ResumeExpertise[]
-  education: ResumeEducation[]
-  experience: ResumeExperience[]
-  langages: ResumeLangage[]
-  social: ResumeSocial[]
-  hobbies: ResumeHobby[]
+  social: {
+    linkedin?: string
+    facebook?: string
+    instagram?: string
+    codingame?: string
+    stackoverflow?: string
+    github?: string
+  }
+  experience: ModelResumeExperience[]
+  expertise: ModelResumeExpertise[]
+  education: ModelResumeEducation[]
+  langages: ModelResumeLangage[]
+  hobbies: ModelResumeHobby[]
 }
 
-interface ResumeSocial {
-  name: string
-  link: string
-}
-
-interface ResumeExpertise {
+interface ModelResumeExpertise {
   name: string
   description: string
 }
 
-interface ResumeEducation {
+interface ModelResumeEducation {
   startdate: string
   enddate: string
   school: string
-  diploma: string
-  description: string
-  skills: string[]
+  diploma?: string
+  description?: string
+  skills?: string[]
 }
 
-interface ResumeExperience {
+interface ModelResumeExperience {
   startdate: string
   enddate: string
   company: string
-  jobtitle: string
-  description: string
-  skills: string[]
+  jobtitle?: string
+  description?: string
+  skills?: string[]
 }
 
-interface ResumeLangage {
+interface ModelResumeLangage {
   lang: string
+  icon?: string
   skill: string
 }
 
-interface ResumeHobby {
+interface ModelResumeHobby {
   name: string
-  description: string
+  icon?: string
+  description?: string
 }
